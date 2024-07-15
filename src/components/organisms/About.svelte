@@ -68,7 +68,7 @@
 
 	.text::before {
 		@include outlineText(
-			$content: 'afn',
+			$content: 'Bianca',
 			$translateX: 97%,
 			$translateY: -5%,
 			$fontSize: 300px,
