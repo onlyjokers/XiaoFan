@@ -9,7 +9,7 @@
 </script>
 
 <div class="socials-container">
-	<Social tip="xafn" link="https://github.com/xafn">
+	<!-- <Social tip="xafn" link="https://github.com/xafn">
 		<GitHubIcon color="var(--accent)" />
 	</Social>
 
@@ -19,11 +19,11 @@
 
 	<Social tip="hey@afn.im" link="mailto:hey@afn.im">
 		<MailIcon color="var(--accent)" />
-	</Social>
+	</Social> -->
 
-	<Social tip="affan" link="https://ko-fi.com/affan">
+	<!-- <Social tip="affan" link="https://ko-fi.com/affan">
 		<CoffeeCupIcon color="var(--accent)" />
-	</Social>
+	</Social> -->
 </div>
 
 <style>

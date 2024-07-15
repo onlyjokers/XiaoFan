@@ -6,7 +6,7 @@
 	export let shrink = false;
 	export let commission = false;
 	export let art = '';
-	export let subtitle = 'Click anywhere to dismiss';
+	export let subtitle = '点击任意处返回';
 
 	let clicked = false;
 

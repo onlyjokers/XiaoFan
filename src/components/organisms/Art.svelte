@@ -6,7 +6,7 @@
 <section>
 	<div class="wrapper" id="aw">
 		<Tooltip tip="Click on an artwork">
-			<h2><span>art</span>:work</h2>
+			<h2><span>空间设计</span> : Spatial Design</h2>
 		</Tooltip>
 	</div>
 	<ArtGrid />

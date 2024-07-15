@@ -4,7 +4,7 @@
 
 	// i didnt write this idk
 	let getAge = () => {
-		let birthDate = new Date('2007/03/24');
+		let birthDate = new Date('2001-07-16T00:00:00+08:00');
 		const ageMs = Date.now() - birthDate.getTime();
 		const preciseAge = (ageMs / 31536000000).toFixed(10);
 		return preciseAge;
@@ -23,19 +23,14 @@
 	<div class="text">
 		<h2>bio</h2>
 		<p>
-			Hey there, I'm afn! :] I'm a <Tooltip tip={age}
-				><span>{Math.floor(Number(age))}</span></Tooltip
+			你好！我是<Tooltip tip="❤️"><span><b>阮小凡</b></span></Tooltip>！我是一名<Tooltip tip={age}
+				><span><b>{Math.floor(Number(age))}</b></span></Tooltip
 			>
-			year old digital artist and graphic/UI designer based in Canada. I’ve taken art seriously since
-			<span>2017</span>, and have been doodling silly anime characters since <span>2020</span>.
-			Recently, however, I’ve grown a knack for programming. I like contributing to
+			岁的空间和平面设计师，现就读于<Tooltip tip="🏙️"><span><b>中国美术学院</b></span></Tooltip>视觉中国协同创新中心的
 			<Tooltip tip="🤓">
-				<a href="https://github.com/xafn" target="_blank" rel="noreferrer">
-					<span>open source</span>
-				</a>
+				<span><b>空间营造</b></span>
 			</Tooltip>
-			as a web developer, which is probably the reason why you've ended up here. Currently struggling
-			with Svelte and Typescript.
+			方向。
 		</p>
 	</div>
 </section>

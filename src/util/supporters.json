@@ -1,23 +1,34 @@
 [
     {
-        "name": "afterst0rm",
-        "icon": "/supporters/afterst0rm.webp",
+        "name": "Eureka",
+        "icon": "/supporters/Eureka.webp",
         "message":
             "I wish I could do more, but I appreciate your work and creativity. You'll achieve great highs, brother. Big hugs from your Brazilian friend."
     },
     {
-        "name": "Kevin T.",
-        "icon": "/supporters/kevin_t.webp",
+        "name": "青青的山",
+        "icon": "/supporters/青青的山.webp",
         "message": "hi"
     },
     {
-        "name": "Taku",
-        "icon": "/supporters/taku.webp",
+        "name": "Ashdown",
+        "icon": "/supporters/Ashdown.webp",
         "message": "3 Covfefe"
     },
     {
-        "name": "notIvan",
-        "icon": "/supporters/notIvan.webp",
+        "name": "hxc521184",
+        "icon": "/supporters/hxc521184.webp",
+        "message": "i forgot ☠️"
+    },    
+    {
+        "name": "zone_dec",
+        "icon": "/supporters/zone_dec.webp",
+        "message": "i forgot ☠️"
+    },
+    {
+        "name": "zjlseven",
+        "icon": "/supporters/zjlseven.webp",
         "message": "i forgot ☠️"
     }
+
 ]

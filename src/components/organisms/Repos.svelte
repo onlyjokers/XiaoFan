@@ -1,4 +1,7 @@
 <script lang="ts">
+	import Tooltip from '../atoms/Tooltip.svelte';
+	import ArtGrid2 from '../../components/molecules/ArtGrid2.svelte';
+
 	import { onMount } from 'svelte';
 	import type { Repo } from '../../util/types';
 
@@ -24,9 +27,12 @@
 
 <section class="wrapper" id="code">
 	<div class="title">
-		<h2><span>code</span>:work</h2>
+		<Tooltip tip="Click on an artwork">
+			<h2><span>平面设计</span> : Graphic Design</h2>
+		</Tooltip>
 	</div>
-	<div class="grid">
+	<ArtGrid2/>
+	<!-- <div class="grid">
 		{#if repos}
 			{#each repos as { link, owner, repo, description, languageColor, language, stars, forks }}
 				<a href={link} target="_blank" rel="noreferrer">
@@ -73,11 +79,34 @@
 			{#each Array(4) as _}
 				<div class="repo-card shimmer" />
 			{/each}
-		{/if}
-	</div>
+		{/if} -->
+	<!-- </div> -->
 </section>
 
 <style lang="scss">
+	span {
+		color: var(--accent);
+	}
+
+	h2 {
+		display: inline-block;
+		margin-bottom: 1rem;
+	}
+
+	div {
+		display: flex;
+		justify-content: center;
+		margin-top: 0;
+
+		@media (max-width: 868px) {
+			justify-content: left;
+			margin-bottom: 0.3rem;
+		}
+	}
+</style>
+
+
+<!-- <style lang="scss">
 	@import '../../styles/mixins.scss';
 
 	.title {
@@ -211,4 +240,4 @@
 			gap: 0.9rem;
 		}
 	}
-</style>
+</style> -->

@@ -5,7 +5,7 @@
 	import { user } from '../../util/discord';
 	import type { Spotify } from '../../util/types';
 
-	let activity = `@${user.username}`,
+	let activity = `@Biancanala`,
 		details = 'Fetching...',
 		activityImage = 'default.webp',
 		pulse = 30000,
@@ -13,7 +13,7 @@
 		state: string,
 		smallImage: string,
 		isSpotify: boolean,
-		isActivity: boolean,
+		// isActivity: boolean,
 		songLink: string,
 		progress: number,
 		elapsed: string,
@@ -27,7 +27,7 @@
 	};
 
 	function localTime() {
-		state = new Date().toLocaleTimeString('en-US', { timeZone: 'America/New_York' });
+		state = new Date().toLocaleTimeString('zh-cn', { timeZone: 'Asia/Shanghai' });
 	}
 
 	function musicProgress(spotify: Spotify) {
@@ -72,9 +72,10 @@
 
 				// requestAnimationFrame is much more performant than setTimeout
 				function tick() {
-					if (isSpotify) musicProgress(data.spotify);
-					else if (isActivity) elapsedTime(data.activities[activityNumber].timestamps.start);
-					else if (!isActivity) localTime();
+					// if (isSpotify) musicProgress(data.spotify);
+					// else if (isActivity) elapsedTime(data.activities[activityNumber].timestamps.start);
+					// else if (!isActivity) 
+					localTime();
 					currentRequestAnimationFrame = requestAnimationFrame(tick);
 				}
 
@@ -85,7 +86,7 @@
 
 				if (opcode === 0) {
 					isSpotify = data.listening_to_spotify;
-					isActivity = !!data.activities[0];
+					// isActivity = !!data.activities[0];
 					// console.log(isActivity, hasStatus);
 					// hasStatus = data.activities[0].name === 'Custom Status';
 
@@ -98,43 +99,43 @@
 					// 	activityNumber = 0;
 					// }
 
-					if (isSpotify) {
-						({
-							song: activity,
-							artist: details,
-							album: state,
-							album_art_url: activityImage
-						} = data.spotify);
+					// if (isSpotify) {
+					// 	({
+					// 		song: activity,
+					// 		artist: details,
+					// 		album: state,
+					// 		album_art_url: activityImage
+					// 	} = data.spotify);
 
-						details = 'by ' + details.replace(/;/g, ',');
-						state = activity === state ? '' : 'on ' + state; // check if the song is a single
-						songLink = `https://open.spotify.com/track/${data.spotify.track_id}`;
-						smallImage = '';
-						cancelAnimationFrame(currentRequestAnimationFrame);
-						tick();
-					} else if (isActivity) {
-						({ name: activity, details, state } = data.activities[activityNumber]);
-						activityImage = data.activities[activityNumber].assets
-							? `https://cdn.discordapp.com/app-assets/${data.activities[activityNumber].application_id}/${data.activities[activityNumber].assets.large_image}.webp?size=512`
-							: images[activity] || 'question_mark.png';
-						smallImage = '';
-						if (
-							data.activities[activityNumber].assets &&
-							data.activities[activityNumber].assets.small_image
-						) {
-							smallImage = `https://cdn.discordapp.com/app-assets/${data.activities[activityNumber].application_id}/${data.activities[activityNumber].assets.small_image}.webp?size=512`;
-						}
-						cancelAnimationFrame(currentRequestAnimationFrame);
-						tick();
-					} else if (!isActivity) {
-						activity = `@${user.username}`;
+					// 	details = 'by ' + details.replace(/;/g, ',');
+					// 	state = activity === state ? '' : 'on ' + state; // check if the song is a single
+					// 	songLink = `https://open.spotify.com/track/${data.spotify.track_id}`;
+					// 	smallImage = '';
+					// 	cancelAnimationFrame(currentRequestAnimationFrame);
+					// 	tick();
+					// } else if (isActivity) {
+					// 	({ name: activity, details, state } = data.activities[activityNumber]);
+					// 	activityImage = data.activities[activityNumber].assets
+					// 		? `https://cdn.discordapp.com/app-assets/${data.activities[activityNumber].application_id}/${data.activities[activityNumber].assets.large_image}.webp?size=512`
+					// 		: images[activity] || 'question_mark.png';
+					// 	smallImage = '';
+					// 	if (
+					// 		data.activities[activityNumber].assets &&
+					// 		data.activities[activityNumber].assets.small_image
+					// 	) {
+					// 		smallImage = `https://cdn.discordapp.com/app-assets/${data.activities[activityNumber].application_id}/${data.activities[activityNumber].assets.small_image}.webp?size=512`;
+					// 	}
+					// 	cancelAnimationFrame(currentRequestAnimationFrame);
+					// 	tick();
+					// } else if (!isActivity) {
+						activity = `@Biancanala`;
 						details = data.discord_status.charAt(0).toUpperCase() + data.discord_status.slice(1);
 						details = details === 'Dnd' ? 'Do Not Disturb' : details;
 						activityImage = 'default.webp';
 						smallImage = '';
 						cancelAnimationFrame(currentRequestAnimationFrame);
 						tick();
-					}
+					// }
 				}
 
 				// re-open websocket connection when it closes, e.g. when switched out of tab
@@ -164,13 +165,14 @@
 		{:else}
 			<h3>{activity}</h3>
 		{/if}
-		<h5>{details || ''}</h5>
-		<h5>{state || ''}</h5>
-		{#if isSpotify}
+		<!-- <h5>{details || ''}</h5> -->
+		<h5>计划是正确的，因此我是正确的</h5>
+		<h5>CN {state || ''}</h5>
+		<!-- {#if isSpotify}
 			<progress max="100" value={progress} />
-		{:else if isActivity}
-			<h5>{elapsed}</h5>
-		{/if}
+		{:else if isActivity} -->
+		<!-- <h5>{elapsed}</h5> -->
+		<!-- {/if} -->
 	</div>
 </div>
 

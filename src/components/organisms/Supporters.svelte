@@ -4,8 +4,7 @@
 
 <section class="wrapper">
 	<div class="title">
-		<h2>supporters</h2>
-		<p>Thank you!</p>
+		<h2>我的朋友们!</h2>
 	</div>
 
 	<div class="supporters">

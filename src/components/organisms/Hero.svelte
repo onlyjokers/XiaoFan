@@ -12,8 +12,8 @@
 
 <section id="home" class="wrapper">
 	<div>
-		<h1>afn</h1>
-		<h4>Hobbyist illustrator and designer. <br />Attempting to program.</h4>
+		<h1>HI, I'm Bianca</h1>
+		<h4>阮小凡 / XiaoFan Ruan <br />空间设计师/ 平面设计师</h4>
 		<div class="socials">
 			<Socials />
 		</div>
